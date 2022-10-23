@@ -25,17 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void modifyLayout( Configuration newConfig ) {
         Button b2 = ( Button ) findViewById( R.id.button2 );
-        ViewGroup.MarginLayoutParams params2
-                = (ViewGroup.MarginLayoutParams) b2.getLayoutParams( );
+        ViewGroup.MarginLayoutParams params2 = (ViewGroup.MarginLayoutParams) b2.getLayoutParams( );
         Button b3 = ( Button ) findViewById( R.id.button3 );
-        ViewGroup.MarginLayoutParams params3
-                = (ViewGroup.MarginLayoutParams) b3.getLayoutParams( );
+        ViewGroup.MarginLayoutParams params3 = (ViewGroup.MarginLayoutParams) b3.getLayoutParams( );
 
         if( newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE ) {
             params2.setMargins( 0, SPACING_HORIZONTAL, 0, 0 );
             params3.setMargins( 0, SPACING_HORIZONTAL, 0, 0 );
-        } else if( newConfig.orientation
-                == Configuration.ORIENTATION_PORTRAIT ) {
+        } else if( newConfig.orientation == Configuration.ORIENTATION_PORTRAIT ) {
             params2.setMargins( 0, SPACING_VERTICAL, 0, 0 );
             params3.setMargins( 0, SPACING_VERTICAL, 0, 0 );
         }
